@@ -1,16 +1,20 @@
 
 import type { Metadata } from "next";
 import { Providers } from "./providers";
-import Navbar from "../component/Navbar";
-import Footer from "../component/Footer";
-import { Poppins} from "next/font/google";
+import Header from "@/components/header";
+import HeaderMobile from "@/components/header-mobile";
+import MainNav from "@/components/main-nav";
+import Footer from "@/components/footer";
+import PageWrapper from "@/components/page-wrapper";
+import MarginWidthWrapper from "@/components/margin-width-wrapper";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({ 
-  weight: ['200','300','400', '500', '600', '800'],
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  display: 'swap' 
+  display: 'swap'
 });
 
 export const metadata: Metadata = {
@@ -27,9 +31,20 @@ export default function RootLayout({
     <html lang="en" className={poppins.className} suppressHydrationWarning>
       <body className="bg-gray-50 dark:bg-slate-800">
         <Providers>
-          <Navbar />
-          <main className="text-slate-900 dark:text-gray-50">{children}</main>
-          <Footer />
+          <div className="flex">
+            <MainNav />
+            <main className="flex-1">
+              <MarginWidthWrapper>
+              <Header />
+              <HeaderMobile />
+              <PageWrapper>
+              {children}
+              </PageWrapper>
+              <Footer />
+              </MarginWidthWrapper>
+            </main>
+          </div>
+
         </Providers>
       </body>
     </html>

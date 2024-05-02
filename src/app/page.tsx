@@ -3,22 +3,19 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-6">
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-      <h1 className=""> Home Page </h1>
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/JC-light.svg"
-          alt="JC Logo"
-          width={180}
-          height={180}
-          priority
-        />
-        
+    <div className="flex flex-col p-6 w-full justify-evenly">
+      <div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 w-full text-center">
+        <h1>Home Page</h1>
       </div>
-      
+      <div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
 
-    </div>
+      </div>
+      <div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
+
+      </div>
+      <div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
+
+      </div>
+     </div>
   );
 }

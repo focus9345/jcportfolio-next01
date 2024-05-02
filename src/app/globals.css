@@ -6,10 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --color-primary: #51226e;
-  --color-secondary: #a3b20a;
-  --color-buttons: #38648D;
-  --color-typography: #163047;
+  --color-primary: 81, 34, 110;
+  --color-secondary: 163, 178, 10;
+  --color-buttons: 56, 100, 141;
+  --color-typography: 22, 48, 71;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,15 +17,15 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --color-primary: #a25db5;
-    --color-secondary: #c2d500;
-    --color-buttons: #66B5FF;
-    --color-typography: #DDFFFC;
+    --color-primary: 162, 93, 181;
+    --color-secondary: 194, 213, 0;
+    --color-buttons: 102, 181, 255;
+    --color-typography: 221, 255, 252;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--color-typography));
   background: linear-gradient(
       to bottom,
       transparent,
@@ -39,8 +39,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+    @apply font-bold;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-semibold;
+  }
+  h3 {
+    @apply text-xl;
+    @apply font-semibold;
+  }
+  h4 {
+    @apply text-lg;
+    @apply font-medium;
+  }
+  h5 {
+    @apply text-base;
+    @apply font-medium;
   }
 }

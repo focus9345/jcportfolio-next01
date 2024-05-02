@@ -1,4 +1,4 @@
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./themeSwitch";
 import { Oxanium } from "next/font/google";
 import {
   FaBriefcase,
@@ -106,6 +106,7 @@ export default function Navbar() {
               <ThemeSwitch /> 
             </span>
           </div>
+          {/* 
           <div>
             <a
               href="#"
@@ -114,6 +115,7 @@ export default function Navbar() {
               Download
             </a>
           </div>
+          */}
         </div>
       </nav>
     </>
