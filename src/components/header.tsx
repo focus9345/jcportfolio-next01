@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import useScroll from "@/hooks/user-scroll";
+import MainNav from "./main-nav";
 import { cn } from "@/lib/utils";
 import { Oxanium } from "next/font/google";
 
@@ -20,10 +21,10 @@ export default function Header() {
   return (
     <div
       className={cn(
-        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-red-500`,
+        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-600`,
         {
-          "border-b border-gray-500 bg-white/15 backdrop-blur-lg": scrolled,
-          "border-b border-lime-500 bg-white/25": selectedLayout,
+          "border-b border-gray-600 bg-white/15 backdrop-blur-lg": scrolled,
+          "border-b border-gray-600 bg-white/02": selectedLayout,
         }
       )}
     >
@@ -31,13 +32,13 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           <Link
             href="/"
-            className="flex-row space-x-3 items-center justify-center md:hidden"
+            className="flex-row space-x-3 items-center justify-center"
           >
             <svg
               fill="none"
               stroke-linecap="square"
               stroke-miterlimit="10"
-              className="fill-current h-7 w-7 mr-0 inline-block"
+              className="fill-current h-6 w-6 mr-0 inline-block"
               viewBox="0 0 54 54"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -72,17 +73,16 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <span className={`${oxanium.className} font-sans text-xl mt-1 text-lime-400 dark:text-lime-500`}>
+            <span className={`${oxanium.className} text-xl mt-1 text-lime-400 dark:text-lime-500`}>
               Joshua Connor
             </span>
           </Link>
         </div>
 
         <div className="hidden md:block">
-          <div className="h-8 w-8 rounded-full bg-fuchsia-900 flex items-center justify-center text-center">
-            <span className="font-semibold text-sm">HQ</span>
-          </div>
+          <MainNav />
         </div>
+        
       </div>
     </div>
   );

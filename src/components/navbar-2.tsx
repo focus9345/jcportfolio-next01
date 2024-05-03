@@ -103,7 +103,7 @@ export default function Navbar() {
               Projects
             </Link>
             <span className="block mt-5 lg:inline-block lg:mt-0 text-lime-200 hover:text-white dark:text-fuchsia-900 dark:hover:text-black mr-4">
-              <ThemeSwitch /> 
+               
             </span>
           </div>
           {/* 

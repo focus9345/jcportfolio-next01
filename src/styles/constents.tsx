@@ -1,8 +1,9 @@
-
+//import ThemeSwitch from "../components/themeSwitch";
 import {
     FaBriefcase,
     FaFish,
     FaLaptopCode,
+    FaLightbulb,
   } from "react-icons/fa6";
   import { NavItem } from "./types";
 
@@ -10,17 +11,17 @@ import {
     {
         title: "Home",
         path: "/",
-        icon: <FaBriefcase className="inline-block pr-1 text-2xl" />
+        icon: <FaBriefcase className="text-2xl" />
     },
     {
         title: "About",
         path: "/about",
-        icon: <FaFish className="inline-block pr-1 text-2xl" />
+        icon: <FaFish className="text-2xl" />
     },
     {
         title: "Projects",
         path: "/projects",
-        icon: <FaLaptopCode className="inline-block pr-1 text-2xl" />,
+        icon: <FaLaptopCode className="text-2xl" />,
         submenu: true,
         subMenuItems: [
             {
@@ -40,6 +41,7 @@ import {
     {
         title: "Mode",
         path: "#",
-        icon: <FaFish className="inline-block pr-1 text-3xl" />
+        icon: <FaLightbulb className="text-2xl" />
     },
+    
   ]

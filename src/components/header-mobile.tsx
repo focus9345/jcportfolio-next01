@@ -6,6 +6,8 @@ import { NAV_ITEMS } from "@/styles/constents";
 import { NavItem, MenuItemWithSubMenuProps } from "@/styles/types";
 import { motion, useCycle } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa6";
+import ThemeSwitch from "./themeSwitch";
+
 
 const sidebar = {
     open: (height = 1000) => ({
@@ -58,6 +60,9 @@ export default function HeaderMobile() {
                     >
                         {NAV_ITEMS.map((item, index) => {
                             const isLastItem = index === NAV_ITEMS.length -1;
+                            const isMode = item.title === "Mode";
+                           
+                            
                             return (
                                 <div key={index}>
                                     {item.submenu ? (
@@ -76,8 +81,9 @@ export default function HeaderMobile() {
                                     { !isLastItem && (
                                         <MenuItem className="my-3 h-px w-full bg-gray-300" />
                                     )}
+                                   
                                 </div>
-                            )
+                            );
                         })}
                 </motion.ul>
                 <MenuToggle toggle={toggleOpen} />

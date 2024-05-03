@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Joshua Connor Next Portfolio",
-  description: "Details on the workings and development of Joshua Connor.",
+  description: "Details on projects and development of Joshua Connor a fullstack developer.",
 };
 
 export default function RootLayout({
@@ -32,16 +32,16 @@ export default function RootLayout({
       <body className="bg-gray-50 dark:bg-slate-800">
         <Providers>
           <div className="flex">
-            <MainNav />
+            
             <main className="flex-1">
-              <MarginWidthWrapper>
-              <Header />
-              <HeaderMobile />
-              <PageWrapper>
-              {children}
-              </PageWrapper>
-              <Footer />
-              </MarginWidthWrapper>
+              {/* <MarginWidthWrapper> */}
+                <Header />
+                <HeaderMobile />
+                <PageWrapper>
+                  {children}
+                </PageWrapper>
+                <Footer />
+              {/* </MarginWidthWrapper> */}
             </main>
           </div>
 
