@@ -1,11 +1,11 @@
-//import ThemeSwitch from "../components/themeSwitch";
+
 import {
     FaBriefcase,
     FaFish,
     FaLaptopCode,
     FaLightbulb,
   } from "react-icons/fa6";
-  import { NavItem } from "./types";
+  import { NavItem } from "../types/types";
 
   export const NAV_ITEMS: NavItem[] = [
     {
@@ -28,13 +28,18 @@ import {
                 title: 'All',
                 path: "/projects"
             },
-            {
-                title: 'design',
-                path: "/projects/design"
-            },
+            
             {
                 title: 'Apps',
                 path: "/projects/apps"
+            },
+            {
+                title: 'Design',
+                path: "/projects/design"
+            },
+            {
+                title: 'Web',
+                path: "/projects/web"
             },
         ]
     },

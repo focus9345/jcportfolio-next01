@@ -1,17 +1,54 @@
 import Link from 'next/link';
+import { FaCopyright, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 export default function Footer() {
 
     const date = new Date().getFullYear();
     return (
-        <>
+        
         <footer>
-        <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-          &copy; Copyright {date}, Joshua Connor <Link href="/privacy">Privacy Policy</Link>
-          </p>
-        
+        <div className="flex flex-row items-center justify-between px-4 m-6">
 
+          <div className="items-center justify-between grow">
+        
+          <p className="text-sm break-all">
+          <FaCopyright className="inline-block" /> Copyright {date}, Joshua Connor | <Link href="/privacy">Privacy Policy</Link>
+          </p>
+
+          </div>
+
+          <div className="items-center justify-between text-right">
+
+            <a 
+              href="https://www.linkedin.com/in/connorjoshua/"
+              className="pl-3 inline-block"
+              target="_blank"
+              rel="opener"
+              >
+                <FaLinkedin className="text-3xl" />
+              </a>
+
+              <a 
+              href="https://github.com/focus9345/"
+              className="pl-3 inline-block"
+              target="_blank"
+              rel="opener"
+              >
+                <FaGithub className="text-3xl" />
+              </a>
+
+              <a 
+              href="https://www.instagram.com/joshuaconnor8345/"
+              className="pl-3 inline-block"
+              target="_blank"
+              rel="opener"
+              >
+                <FaInstagram className="text-3xl" />
+              </a>
+
+
+          </div>
+        
+{/*
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -62,8 +99,8 @@ export default function Footer() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+    */}
       </div>
         </footer>
-        </>
     )
 }

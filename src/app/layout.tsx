@@ -3,10 +3,8 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import Header from "@/components/header";
 import HeaderMobile from "@/components/header-mobile";
-import MainNav from "@/components/main-nav";
 import Footer from "@/components/footer";
 import PageWrapper from "@/components/page-wrapper";
-import MarginWidthWrapper from "@/components/margin-width-wrapper";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -34,14 +32,14 @@ export default function RootLayout({
           <div className="flex">
             
             <main className="flex-1">
-              {/* <MarginWidthWrapper> */}
+              
                 <Header />
                 <HeaderMobile />
                 <PageWrapper>
                   {children}
                 </PageWrapper>
                 <Footer />
-              {/* </MarginWidthWrapper> */}
+              
             </main>
           </div>
 
