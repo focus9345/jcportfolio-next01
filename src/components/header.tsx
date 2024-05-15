@@ -28,7 +28,7 @@ export default function Header() {
         }
       )}
     >
-      <div className="flex h-[47px] items-center justify-between px-4">
+      <div className="flex h-[50px] items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link
             href="/"
@@ -38,7 +38,7 @@ export default function Header() {
               fill="none"
               stroke-linecap="square"
               stroke-miterlimit="10"
-              className="fill-current h-6 w-6 mr-0 inline-block"
+              className="fill-current h-6 w-6 inline-block"
               viewBox="0 0 54 54"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -73,7 +73,7 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <span className={`${oxanium.className} text-xl mt-1 text-lime-400 dark:text-lime-500`}>
+            <span className={`${oxanium.className} text-xl mt-1 text-lime-600 dark:text-lime-400`}>
               Joshua Connor
             </span>
           </Link>

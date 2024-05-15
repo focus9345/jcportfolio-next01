@@ -5,8 +5,8 @@ export default function Footer() {
     const date = new Date().getFullYear();
     return (
         
-        <footer>
-        <div className="flex flex-row items-center justify-between px-4 m-6">
+        <footer className="w-full">
+        <div className="flex flex-row items-center justify-between p-6">
 
           <div className="items-center justify-between grow">
         

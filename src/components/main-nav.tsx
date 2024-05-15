@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/styles/constents";
-import { NavItem } from "@/styles/types";
+import { NavItem } from "@/types/types";
 import { FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 import { Oxanium } from "next/font/google";
