@@ -11,7 +11,6 @@ import {
     FaCube,
     FaCubes,
 } from "react-icons/fa6";
-import Image from 'next/image'
 import Placeholder from '@/assets/placeholder.jpg';
 import GenericSprintPlan from '@/assets/pexels-startup-stock-photos-7376.jpg';
 import GenericCode from '@/assets/pexels-rsantos1232-3888151.jpg';
@@ -27,7 +26,7 @@ import GenericWork from '@/assets/pexels-divinetechygirl-1181307.jpg';
 import RCVEST from '@/assets/logo_rcvest.png';
 import NAFI from '@/assets/logo_nafi.png';
 import SlackTrello from '@/assets/background-portfolio-3.jpg';
-import NAFIboard from '@/assets/background-portfolio-3.jpg';
+import NAFIboard from '@/assets/background-portfolio-2.jpg';
 import WebBuild from '@/assets/background-portfolio-1.jpg';
 
 import { WorkItem, ProjectStack } from "../types/types";
