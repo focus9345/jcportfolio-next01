@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className} suppressHydrationWarning>
-      <body className="bg-gray-100 dark:bg-slate-800">
+      <body className="bg-gray-100 dark:bg-slate-800 text-slate-950 dark:text-zinc-100">
         <Providers>
           <div className="flex flex-col justify-between min-h-screen">
             <main className="flex-1">

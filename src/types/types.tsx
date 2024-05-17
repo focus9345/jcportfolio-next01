@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export enum ProjectStack {
     APP = "Application",
     DESIGN = "Design",
@@ -18,12 +20,13 @@ export type MenuItemWithSubMenuProps = {
     toggleOpen: () => void; 
 };
 
-export type ProjectItem ={
+export type WorkItem = {
     id: string;
     title: string;
-    image: string;
+    image: StaticImageData;
     icon?: JSX.Element;
     detail: string;
     type: ProjectStack;
     stack?: string[];
+    repo?: string;
 }
