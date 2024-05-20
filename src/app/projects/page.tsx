@@ -51,7 +51,9 @@ export default function Projects() {
                 
                 return (
                     <>
+                    
                     <ProjectItem key={project.id} {...project} />
+                    
                     </>
                 )})
                 }

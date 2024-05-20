@@ -30,3 +30,9 @@ export type WorkItem = {
     stack?: string[];
     repo?: string;
 }
+
+export type ProjectIcons = {
+    id: string;
+    name: string;
+    icon: JSX.Element;
+}

@@ -25,20 +25,11 @@ import {
     SiAdobeindesign,
 } from "react-icons/si";
 
-import {
-    BsFiletypeDoc,
-} from "react-icons/bs";
-import {
-    GrDocumentImage,
-    GrDocument
-} from "react-icons/gr";
-import {
-    VscCode
-} from "react-icons/vsc";
+
 import { WorkItem } from '@/types/types';
 import React from 'react';
 import ProjectImage from './project-image';
-
+import ProjectStack from './project-stack';
 
 const ProjectItem: React.FC<WorkItem> = (props) => {
     return (
@@ -55,14 +46,15 @@ const ProjectItem: React.FC<WorkItem> = (props) => {
                                 </h3>
                             </header>
                             <section className="">
-                                {/* will need to create a stack here */}
+                                <ProjectStack stack={props.stack} />
+                                {/* will need to create a stack here
                                 <ul className="flex flex-row text-2xl text-yellow-400">
                                     <li className="pr-4"><SiJavascript /></li>
                                     <li className="pr-4"><SiHtml5 /></li>
                                     <li className="pr-4"><SiCss3 /></li>
                                     <li className="pr-4"><SiReact /></li>
                                     <li className="pr-4"><SiSqlite /></li>
-                                </ul>
+                                </ul>*/}
                             </section>
                             <main className="h-98">
                                 <p>{props.detail}</p>
