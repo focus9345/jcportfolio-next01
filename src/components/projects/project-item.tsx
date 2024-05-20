@@ -1,31 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image'; 
+import Link from 'next/link'; 
 import {
-    FaLaptopCode,
-    FaNodeJs,
     FaGithub
 } from "react-icons/fa6";
-
-import {
-    SiGlitch,
-    SiJavascript,
-    SiHtml5,
-    SiCss3,
-    SiMysql,
-    SiSqlite,
-    SiPython,
-    SiTypescript,
-    SiApachecordova,
-    SiReact,
-    SiLucid,
-    SiFigma,
-    SiAdobe,
-    SiAdobephotoshop,
-    SiAdobeillustrator,
-    SiAdobeindesign,
-} from "react-icons/si";
-
-
 import { WorkItem } from '@/types/types';
 import React from 'react';
 import ProjectImage from './project-image';
@@ -47,22 +23,16 @@ const ProjectItem: React.FC<WorkItem> = (props) => {
                             </header>
                             <section className="">
                                 <ProjectStack stack={props.stack} />
-                                {/* will need to create a stack here
-                                <ul className="flex flex-row text-2xl text-yellow-400">
-                                    <li className="pr-4"><SiJavascript /></li>
-                                    <li className="pr-4"><SiHtml5 /></li>
-                                    <li className="pr-4"><SiCss3 /></li>
-                                    <li className="pr-4"><SiReact /></li>
-                                    <li className="pr-4"><SiSqlite /></li>
-                                </ul>*/}
                             </section>
                             <main className="h-98">
                                 <p>{props.detail}</p>
                             </main>
                             <footer className="flex justify-end items-end">
+                                {props.repo && 
                                 <Link className="bg-blue-500 text-zinc-100 py-2 px-6 rounded-xl" href="https:github.com" >
                                     <FaGithub className="inline-block pr-1 text-2xl" /> Go To Repo
                                 </Link>
+                                }
                             </footer>
                         </section>
                     </article>

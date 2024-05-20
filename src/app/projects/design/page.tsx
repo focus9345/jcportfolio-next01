@@ -1,20 +1,32 @@
 import { FaEyeDropper } from "react-icons/fa6";
+import { PROJECT_ITEMS } from '@/styles/projects';
+//import Link from 'next/link';
+import ProjectItem from '@/components/projects/project-item';
+import { ProjectStack } from "@/types/types";
 
+const DESIGN_ITEMS = PROJECT_ITEMS.filter( (item) => item.type == ProjectStack.DESIGN);
 export default function ProjectsDesigns() {
     return (
 <>
-<div className="flex min-h-screen flex-col items-center justify-between p-6">
-<h1><FaEyeDropper className="inline-block pr-1" /> Graphic Design</h1>
-<div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
+<div className="flex flex-col items-center justify-between">
 
-</div>
-<div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
+                <div className="p-4 md:p-10 w-full mb-10 text-center">
+                    <h1><FaEyeDropper className="inline-block pr-1" /> Graphic Design Projects</h1>
+                </div>
 
-</div>
-<div className="mt-2 mb-4 rounded-md border-zinc-500 border-dotted border-2 min-h-40 w-full">
+                {DESIGN_ITEMS.map((project) => {
 
-</div>
-</div>
+                    return (
+                        <>
+
+                            <ProjectItem key={project.id} {...project} />
+
+                        </>
+                    )
+                })
+                }
+
+            </div>
 </>
     )
 }

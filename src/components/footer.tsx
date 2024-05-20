@@ -11,7 +11,8 @@ export default function Footer() {
           <div className="items-center justify-between grow">
         
           <p className="text-sm break-all">
-          <FaCopyright className="inline-block" /> Copyright {date}, Joshua Connor | <Link href="/privacy">Privacy Policy</Link>
+          <FaCopyright className="inline-block" /> Copyright {date}, Joshua Connor | <Link href="/privacy">Privacy Policy</Link> <br />
+          Preferred contact method is through <Link href="https://www.linkedin.com/in/connorjoshua/">linked in</Link> app.
           </p>
 
           </div>
