@@ -8,7 +8,6 @@ type StackData = {
 }
 
 const ProjectStack: React.FC<StackData> = (props) => {
-    console.log("props stack: " + props.stack?.length);
     if (!props) {
         return (
             <ul className="flex flex-row text-2xl text-yellow-400">
@@ -24,7 +23,6 @@ const ProjectStack: React.FC<StackData> = (props) => {
         <ul className="flex flex-row text-2xl text-yellow-400">
             {props.stack?.map( (stackItem) => {
                 const indexIconList = IconsList.findIndex( (element: ProjectIcons) => element.id === stackItem);
-                console.log(stackItem + " : " + indexIconList);
                 return (
                     <li key={indexIconList} className="pr-3 text-3xl">
                         <Tooltip content={IconsList[indexIconList].name}>

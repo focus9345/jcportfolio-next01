@@ -1,17 +1,39 @@
 import Link from 'next/link'; 
-import { WorkItem } from '@/types/types';
+import { WorkItem, ProjectStack } from '@/types/types';
 import React from 'react';
 import ProjectImage from './project-image';
+let projectLink: string;
 
 const ProjectGrid: React.FC<WorkItem> = (props) => {
-    <div className="p-4 md:p-10 border rounded-xl border-zinc-300/20 mb-10 w-full">
+    
+    if(props.type === ProjectStack.APP) {
+        projectLink = 'apps';
+    } else if (props.type === ProjectStack.DESIGN) {
+        projectLink = 'design'
+    } else if (props.type === ProjectStack.WEB) {
+        projectLink = 'web'
+    } else {
+        throw new Error("Project Type Not Defined!");
+    }
+    return (
+    
 
-        <article className="bg-zinc-500/20 rounded-lg w-32 h-32">
-
+        <article className="flex flex-col bg-slate-900 rounded-lg w-full border border-zinc:300">
+            <figure>
+                <ProjectImage imagePrj={props.image} title={props.title} />
+            </figure>
+            <main className="my-5 px-5 text-center font-semibold">
+            {props.title}
+            </main>
+            <footer className="text-center border border-zinc-100 block min-h-10">
+                <Link className="bg-blue-500 text-zinc-100 py-2 px-10 rounded-xl" href={`/projects/${projectLink}#${props.id}`} >
+                    Details
+                </Link>
+            </footer> 
         </article>
 
-    </div>
-
+    
+    )
 }
 
 export default ProjectGrid;

@@ -9,7 +9,7 @@ import ProjectStack from './project-stack';
 
 const ProjectItem: React.FC<WorkItem> = (props) => {
     return (
-        <div className="p-4 md:p-10 border rounded-xl border-zinc-300/20 mb-10 w-full">
+        <div className="p-4 md:p-10 border rounded-xl border-zinc-300/20 mb-10 w-full" id={props.id}>
                     <article className="flex flex-row p-10 bg-zinc-500/20 rounded-lg">
                         <figure className="mr-10 basis-1/3">
                             <ProjectImage imagePrj={props.image} title={props.title} />

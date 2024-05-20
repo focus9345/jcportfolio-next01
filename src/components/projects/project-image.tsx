@@ -16,8 +16,6 @@ const ProjectImage: React.FC<ImageData> = (props) => {
         alt = 'A generic project image';
     }
   
-
-    
     return (
         <>
             <Image src={props.imagePrj} alt={alt} className="shadow-xl rounded-xl object-cover h-52 w-full" />
