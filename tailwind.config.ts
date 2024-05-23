@@ -10,16 +10,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        buttons: 'var(--color-buttons)',
-        typography: 'var(--color-typography)',
+        primary: 'hsl(var(--color-primary) / <alpha-value>)',
+        secondary: 'hsl(var(--color-secondary) / <alpha-value>)',
+        button: 'hsl(var(--color-button) / <alpha-value>)',
+        border: 'hsl(var(--color-border) / <alpha-value>)',
+        card: 'hsl(var(--color-card) / <alpha-value>)',
+        icon: 'hsl(var(--color-icon) / <alpha-value>)',
+        typography: 'hsl(var(--color-typography) / <alpha-value>)',
+        bkg: "hsl(var(--color-bkg) / <alpha-value>)",
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

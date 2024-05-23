@@ -12,7 +12,7 @@ export default function ProjectsApps() {
         <>
             <div className="flex flex-col items-center justify-between">
 
-                <div className="p-4 md:p-10 w-full mb-10 text-center">
+                <div className="p-10 md:p-14 w-full mb-10 text-center">
                     <h1><FaLaptopCode className="inline-block pr-1" /> Application Projects</h1>
                 </div>
 

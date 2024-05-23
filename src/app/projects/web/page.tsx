@@ -10,7 +10,7 @@ export default function ProjectsDesigns() {
 <>
 <div className="flex flex-col items-center justify-between">
 
-                <div className="p-4 md:p-10 w-full mb-10 text-center">
+                <div className="p-10 md:p-14 w-full mb-10 text-center">
                     <h1><FaDesktop className="inline-block pr-1" /> Website Projects</h1>
                 </div>
 

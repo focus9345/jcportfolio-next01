@@ -21,10 +21,10 @@ export default function Header() {
   return (
     <div
       className={cn(
-        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-600`,
+        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-border`,
         {
-          "border-b border-gray-600 bg-white/15 backdrop-blur-lg": scrolled,
-          "border-b border-gray-600 bg-white/02": selectedLayout,
+          "border-b border-border/50 bg-foreground/70 backdrop-blur-lg": scrolled,
+          "border-b border-border/50 bg-background/50": selectedLayout,
         }
       )}
     >
@@ -73,7 +73,7 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <span className={`${oxanium.className} text-xl mt-1 text-lime-600 dark:text-lime-400`}>
+            <span className={`${oxanium.className} text-xl mt-1 text-secondary`}>
               Joshua Connor
             </span>
           </Link>

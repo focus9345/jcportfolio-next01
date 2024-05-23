@@ -25,7 +25,7 @@ export default function ThemeSwitch() {
     if (resolvedTheme === 'dark') {
         return (
           <>
-          <span onClick={() => setTheme('light')} className="cursor-pointer flex flex-row items-center py-2 px-3 rounded-lg hover-bg-lime-300 text-lime-500 w-full">
+          <span onClick={() => setTheme('light')} className="cursor-pointer flex flex-row items-center py-2 px-3 rounded-lg hover:bg-secondary hover:text-background text-secondary w-full">
             <FaSun className="flex flex-row space-x-3 items-center font-bold" />
             <span className="font-semibold text-lg flex pl-1">Mode</span>
           </span>
@@ -35,7 +35,7 @@ export default function ThemeSwitch() {
     
       if (resolvedTheme === 'light') {
         return (
-          <span onClick={() => setTheme('dark')} className="cursor-pointer flex flex-row items-center py-2 px-3 rounded-lg hover-bg-lime-300 text-lime-500 w-full">
+          <span onClick={() => setTheme('dark')} className="cursor-pointer flex flex-row items-center py-2 px-3 rounded-lg hover:bg-secondary hover:text-foreground text-secondary w-full">
             <FaMoon className="flex flex-row space-x-3 items-center font-bold" /> 
             <span className="font-semibold text-lg flex pl-1">Mode</span>
           </span>

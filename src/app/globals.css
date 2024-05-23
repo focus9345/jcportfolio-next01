@@ -2,69 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --color-primary: 81, 34, 110;
-  --color-secondary: 163, 178, 10;
-  --color-buttons: 56, 100, 141;
-  --color-typography: 22, 48, 71;
-}
 
-@media (prefers-color-scheme: dark) {
+ /* easier to manipulate
+//LIGHT
+        --color-foreground: 329deg 0% 78%;
+        --color-background: 329deg 0% 14%;
+        --color-background-start: 179deg 10% 73%;
+        --color-background-end: 193deg 4% 83%;
+        --color-primary: 277deg 53% 28%;
+        --color-secondary: 65deg 89% 36%;
+        --color-button: 215deg 84% 32%;
+        --color-border: 79deg 65% 17%;
+        --color-card: 262deg 26% 86%;
+        --color-icon: 177deg 70% 25%;
+        --color-typography: 316deg 50% 6%;
+//DARK
+        --color-foreground: 329deg 0% 14%;
+        --color-background: 329deg 0% 78%;
+        --color-background-start: 179deg 10% 13%;
+        --color-background-end: 193deg 4% 23%;
+        --color-primary: 277deg 53% 58%;
+        --color-secondary: 65deg 89% 36%;
+        --color-button: 215deg 90% 62%;
+        --color-border: 79deg 40% 89%;
+        --color-card: 262deg 30% 16%;
+        --color-icon: 177deg 70% 50%;
+        --color-typography: 316deg 19% 89%;
+ */       
+
+
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --color-primary: 162, 93, 181;
-    --color-secondary: 194, 213, 0;
-    --color-buttons: 102, 181, 255;
-    --color-typography: 221, 255, 252;
+    --color-foreground: 329deg 0% 78%;
+    --color-background: 329deg 0% 14%;
+    --color-background-start: 179deg 10% 73%;
+    --color-background-end: 193deg 4% 83%;
+    --color-primary: 277deg 53% 28%;
+    --color-secondary: 65deg 89% 36%;
+    --color-button: 215deg 84% 32%;
+    --color-border: 79deg 65% 17%;
+    --color-card: 262deg 26% 86%;
+    --color-icon: 177deg 70% 25%;
+    --color-typography: 316deg 50% 6%;
   }
-}
-
-body {
-  color: rgb(var(--color-typography));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color:rgb(var(--color-primary));
-}
-
-
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-foreground: 329deg 0% 14%;
+      --color-background: 329deg 0% 78%;
+      --color-background-start: 179deg 10% 13%;
+      --color-background-end: 193deg 4% 23%;
+      --color-primary: 277deg 53% 58%;
+      --color-secondary: 65deg 89% 46%;
+      --color-button: 215deg 90% 62%;
+      --color-border: 79deg 40% 89%;
+      --color-card: 262deg 30% 16%;
+      --color-icon: 177deg 70% 50%;
+      --color-typography: 316deg 19% 89%;
+    }
   }
-}
+  .light {
+    --color-foreground: 329deg 0% 78%;
+    --color-background: 329deg 0% 14%;
+    --color-background-start: 179deg 10% 73%;
+    --color-background-end: 193deg 4% 83%;
+    --color-primary: 277deg 53% 28%;
+    --color-secondary: 65deg 89% 36%;
+    --color-button: 215deg 84% 32%;
+    --color-border: 79deg 65% 17%;
+    --color-card: 262deg 26% 86%;
+    --color-icon: 177deg 70% 25%;
+    --color-typography: 316deg 50% 6%;
+  }
+  .dark {
+    --color-foreground: 329deg 0% 14%;
+    --color-background: 329deg 0% 78%;
+    --color-background-start: 179deg 10% 13%;
+    --color-background-end: 193deg 4% 23%;
+    --color-primary: 277deg 53% 58%;
+    --color-secondary: 65deg 89% 46%;
+    --color-button: 215deg 90% 62%;
+    --color-border: 79deg 40% 89%;
+    --color-card: 262deg 30% 16%;
+    --color-icon: 177deg 70% 50%;
+    --color-typography: 316deg 19% 89%;
+  }
 
-@layer base {
+  @layer base {
+  body {
+    @apply text-typography;
+    background: linear-gradient(to bottom,
+        transparent,
+        hsl(var(--color-background-end))) hsl(var(--color-background-start));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary;
+  }
+
+  p {
+    @apply leading-6;
+    @apply mb-6;
+  }
+
+  * {
+    @apply transition-colors duration-100;
+  }
+
   h1 {
     @apply text-3xl;
     @apply font-bold;
+    @apply mb-4;
   }
+
   h2 {
     @apply text-2xl;
     @apply font-semibold;
+    @apply mb-4;
   }
+
   h3 {
     @apply text-xl;
     @apply font-semibold;
+    @apply mb-4;
   }
+
   h4 {
     @apply text-lg;
     @apply font-medium;
   }
+
   h5 {
     @apply text-base;
     @apply font-medium;
   }
+
+
 }
+
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }

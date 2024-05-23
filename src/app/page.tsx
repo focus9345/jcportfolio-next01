@@ -3,6 +3,7 @@ import Image from "next/image";
 import DevImage from '../../public/pexels-pixabay-265152.jpg';
 import TeamImage from '../../public/pexels-fauxels-3183150.jpg';
 import SolveImage from '../../public/pexels-hillaryfox-1595385.jpg';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -21,8 +22,9 @@ export default function Home() {
             <div className="">
               <h1 className="mb-4">Hi, Im Joshua Connor</h1>
               <p>I am a Front-End / Full-Stack Developer. Im currently looking for my next opportunity to learn, grow, share my knowledge, and make something great.</p>
-              <button className="my-3 px-5 py-3 bg-sky-500 hover:bg-sky-700 text-zinc-100 transition duration-150 rounded ease-out hover:ease-in float-right"> Visit Portfolio </button>
-
+              <Link 
+                href="/projects"
+                className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> Visit Portfolio </Link>
             </div>
           </div>
 
@@ -41,7 +43,9 @@ export default function Home() {
             <div className=" md:basis-2/3">
               <h2>Software Development Teams</h2>
               <p>Trust is at the heart of teamwork quality and preformance. Its earned with communication, cohesion, mutual support, and value sharing. </p>
-              <button className="my-3 px-5 py-3 bg-sky-500 hover:bg-sky-700 text-zinc-100 transition duration-150 rounded ease-out hover:ease-in float-right"> More On Me </button>
+              <Link
+                href="/about"
+                className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> More On Me </Link>
 
             </div>
           </div>
@@ -57,7 +61,9 @@ export default function Home() {
             <div className=" md:basis-2/3">
               <h2>Listen Before Solving</h2>
               <p>One thing experience has taught me is when software attempts to solve business problems its best to truly understand the users and their goals, aiming making their process easier.</p>
-              <button className="my-3 px-5 py-3 bg-sky-500 hover:bg-sky-700 text-zinc-100 transition duration-150 rounded ease-out hover:ease-in float-right"> Contact Me </button>
+              <Link 
+                href="https://www.linkedin.com/in/connorjoshua/"
+                className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> Contact Me </Link>
 
             </div>
           </div>

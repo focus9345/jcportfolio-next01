@@ -1,10 +1,15 @@
 import Image from 'next/image';
-import { FaFish, FaDesktop, FaServer } from "react-icons/fa6";
+
+import { FaDesktop, FaServer } from "react-icons/fa6";
 import RaceBicycle from '../../../public/bicycle.svg';
 import TeamImage from '../../../public/pexels-fauxels-3183150.jpg';
-import SCSU from '../../../public/southernct_white.svg';
+import ModeImage from '@/components/modeImage';
+import UiPath from '../../../public/uipath.png';
+import SCSUdark from '../../../public/southernct_white.svg';
+import SCSUlight from '../../../public/southernct_black.svg';
 
 export default function About() {
+
   return (
     <>
       <div className="flex flex-col md:flex-row w-full">
@@ -72,11 +77,11 @@ export default function About() {
 
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-full dark:bg-fuchsia-900 bg-lime-200 pb-6">
+      <div className="flex flex-col md:flex-row w-full dark:bg-primary/20 bg-secondary/70 pb-6">
         <div className="basis-1/2 md:min-h-full p-4 md:p-10">
-          <h2 className="text-zinc-200 my-8">Work Experience</h2>
-          <div className="flex flex-col w-full border-b border-dashed border-zinc-900 pb-5 mb-8">
-            <h4 className="text-zinc-300">Sheregen Technologies</h4>
+          <h2 className="my-8">Work Experience</h2>
+          <div className="flex flex-col w-full border-b border-dashed border-border pb-5 mb-8">
+            <h4 className="">Sheregen Technologies</h4>
             <p>Senior RPA & UIUX Developer | Feb 2021-July 2023</p>
             <p>New Haven, CT, USA</p>
             <ul className="list-disc text-sm my-1">
@@ -86,8 +91,8 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="flex flex-col w-full border-b border-dashed border-zinc-900 pb-5 mb-8">
-            <h4 className="text-zinc-300">Southern Connecticut State University</h4>
+          <div className="flex flex-col w-full border-b border-dashed border-border pb-5 mb-8">
+            <h4 className="">Southern Connecticut State University</h4>
             <p>Webmaster | Jan	2019 - Dec 2019</p>
             <p>New Haven, CT, USA</p>
             <ul className="list-disc text-sm my-1">
@@ -97,7 +102,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-col w-full pb-5 mb-8">
-            <h4 className="text-zinc-300">Market Hardware</h4>
+            <h4 className="">Market Hardware</h4>
             <p>Senior Front-End Developer | 2009 - 2016</p>
           <p>Bethesda, MD, USA</p>
             <ul className="list-disc text-sm my-1">
@@ -111,15 +116,11 @@ export default function About() {
 
         </div>
         <div className="basis-1/2 md:min-h-full p-4 md:p-10">
-          <h2 className="text-zinc-200 my-8">Education & Achievments</h2>
-          <div className="flex flex-row w-full border-b border-dashed border-zinc-900 pb-5 mb-8">
+          <h2 className=" my-8">Education & Achievments</h2>
+          <div className="flex flex-row w-full border-b border-dashed border-border pb-5 mb-8">
             <div className="basis-1/3 text-center">
-              <Image 
-              src={SCSU}
-              alt="Southern Conneticut State University"
-              width={100}
-              height={100}
-              /></div>
+              <ModeImage DefaultImage={SCSUlight} DarkImage={SCSUdark} AltDesc="Southern Conneticut State University" imgWidth={100} imgHeight={100} />
+              </div>
             <div className="basis-2/3">
             <p>Southern Conneticut State University<br />
             <strong>Masters of Science</strong><br />
@@ -129,14 +130,9 @@ export default function About() {
 
 
           </div>
-          <div className="flex flex-row w-full border-b border-dashed border-zinc-900 pb-5 mb-8">
+          <div className="flex flex-row w-full border-b border-dashed border-boarder pb-5 mb-8">
           <div className="basis-1/3 text-center">
-              <Image 
-              src={SCSU}
-              alt="Southern Conneticut State University"
-              width={100}
-              height={100}
-              /></div>
+          <ModeImage DefaultImage={SCSUlight} DarkImage={SCSUdark} AltDesc="Southern Conneticut State University" imgWidth={100} imgHeight={100} /></div>
               <div className="basis-2/3">
               <p>Southern Conneticut State University<br />
             <strong>Bachelor of Science</strong><br />
@@ -144,29 +140,35 @@ export default function About() {
             Spring 2018</p>
               </div>
           </div>
+          <div className="flex flex-row w-full border-b border-dashed border-boarder pb-5 mb-8">
+          <div className="basis-1/3 text-center">
+              <Image 
+              src={UiPath}
+              alt="UIPATH"
+              width={150}
+              /></div>
+              <div className="basis-2/3">
+              <p>UiPath Certified Professional Advanced RPA Developer (UiARD)</p>
+              </div>
+          </div>
 
           <div className="flex flex-row w-full pb-5 mb-8">
           <div className="basis-1/3 text-center">
-              <Image 
-              src={SCSU}
-              alt="Southern Conneticut State University"
-              width={100}
-              height={100}
-              /></div>
+          <ModeImage DefaultImage={SCSUlight} DarkImage={SCSUdark} AltDesc="Southern Conneticut State University" imgWidth={100} imgHeight={100} /></div>
               <div className="basis-2/3">
-              <h3 className="text-zinc-200 my-1">Awards and Achievments</h3>
-        <h4 className="text-zinc-200 my-1">Deans List</h4>
+              <h3 className=" my-1">Awards and Achievments</h3>
+        <h4 className=" my-1">Deans List</h4>
         <p className="pb-4">Southern Connecticut State University<br />
           Bachelors of Science<br />
           Fall 2016 & Spring 2017</p>
 
-        <h4 className="text-zinc-200 my-1">Honor Society</h4>
+        <h4 className=" my-1">Honor Society</h4>
         <p className="pb-4">Southern Connecticut State University,<br />
           Bachelors of Science<br />
           Tau Sigma Honor Society Member<br />
           Gold Key International Honor Society Member</p>
 
-        <h4 className="text-zinc-200 my-1">4.0 GPA Cumulative</h4>
+        <h4 className=" my-1">4.0 GPA Cumulative</h4>
         <p className="pb-4">Southern Connecticut State University<br />
           Masters of Science</p>
               </div>

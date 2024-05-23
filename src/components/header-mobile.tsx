@@ -3,11 +3,10 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { NAV_ITEMS } from "@/styles/constents";
-import { NavItem, MenuItemWithSubMenuProps } from "@/styles/types";
+import { MenuItemWithSubMenuProps } from "@/types/types";
 import { motion, useCycle } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa6";
 import ThemeSwitch from "./themeSwitch";
-
 
 const sidebar = {
     open: (height = 1000) => ({
@@ -50,7 +49,7 @@ export default function HeaderMobile() {
             ref={ containerRef }
             >
                 <motion.div
-                    className="absolute inset-0 right-0 w-full bg-white"
+                    className="absolute inset-0 right-0 w-full bg-background"
                     variants={sidebar}
                 />
 
@@ -62,6 +61,7 @@ export default function HeaderMobile() {
                             const isLastItem = index === NAV_ITEMS.length -1;
                             const isMode = item.title === "Mode";
                            
+                           
                             
                             return (
                                 <div key={index}>
@@ -69,17 +69,20 @@ export default function HeaderMobile() {
                                         <MenuItemWithSubMenu item={item} toggleOpen={toggleOpen} />
                                     ) : (
                                         <MenuItem>
+                                            {isMode && <ThemeSwitch /> }
+                                            {!isMode &&
                                             <Link
                                                 href={item.path}
                                                 onClick={() => toggleOpen()}
-                                                className={`flex w-full text-2xl ${item.path === pathname ? "font-semibold text-lime-500" : "text-fuchsia-500"}`}
+                                                className={`flex w-full text-2xl ${item.path === pathname ? "font-semibold text-secondary" : "text-primary"}`}
                                                 >
                                                     { item.title }
                                             </Link>
+                                            }
                                         </MenuItem>
                                     )}
                                     { !isLastItem && (
-                                        <MenuItem className="my-3 h-px w-full bg-gray-300" />
+                                        <MenuItem className="my-3 h-px w-full bg-foreground" />
                                     )}
                                    
                                 </div>
@@ -180,12 +183,12 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                 >
                     <div className="flex flex-row justify-between w-full items-center">
                         <span
-                            className={`${pathname.includes(item.path) ? "font-semibold text-lime-500" : "text-fuchsia-500"}`} 
+                            className={`${pathname.includes(item.path) ? "font-semibold text-secondary" : "text-primary"}`} 
                         >
                             {item.title}
                         </span>
                         <div className={`${subMenuOpen && "rotate-180"}`}>
-                            <FaChevronDown className="text-xl text-slate-500" />
+                            <FaChevronDown className="text-xl text-typeography" />
                         </div>
                     </div>
                 </button>
@@ -199,7 +202,7 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                                     <Link
                                         href={subItem.path}
                                         onClick={() => toggleOpen()}
-                                        className={`${subItem.path === pathname ? "font-semibold text-lime-500" : "text-fuchsia-500"}`}
+                                        className={`${subItem.path === pathname ? "font-semibold text-secondary" : "text-primary"}`}
                                         >
                                             {subItem.title}
                                         </Link>

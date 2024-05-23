@@ -5,6 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 type ImageData = {
     imagePrj: StaticImageData;
     title: string;
+    imgWidth: number;
 }
 
 const ProjectImage: React.FC<ImageData> = (props) => {
@@ -18,7 +19,7 @@ const ProjectImage: React.FC<ImageData> = (props) => {
   
     return (
         <>
-            <Image src={props.imagePrj} alt={alt} className="shadow-xl rounded-xl object-cover h-52 w-full" />
+            <Image src={props.imagePrj} alt={alt} className="shadow-xl object-cover h-52 w-full" width={props.imgWidth} />
         </>
     );
 }
