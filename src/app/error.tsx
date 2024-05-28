@@ -17,7 +17,7 @@ export default function Error({
   return (
     <div>
       <h2>Something went wrong!</h2>
-      <p>Well so this happened, thanks for finding some room for improvement.</p>
+      <p>Looks like there is some room for improvement, thanks for finding an opportunity.</p>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
