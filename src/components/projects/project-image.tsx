@@ -19,7 +19,7 @@ const ProjectImage: React.FC<ImageData> = (props) => {
   
     return (
         <>
-            <Image src={props.imagePrj} alt={alt} className="shadow-xl object-cover h-52 w-full" width={props.imgWidth} />
+            <Image src={props.imagePrj} alt={alt} className="shadow-xl object-cover h-52 w-full rounded" width={props.imgWidth} />
         </>
     );
 }

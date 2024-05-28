@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/styles/constents";
 import { NavItem } from "@/types/types";
@@ -7,6 +7,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 import { Oxanium } from "next/font/google";
 import ThemeSwitch from "./themeSwitch";
+
 
 const oxanium = Oxanium({
     weight: ['600'],
@@ -42,8 +43,15 @@ const MenuItem = ({ item }: { item: NavItem }) => {
     const toggleSubMenu = () => {
         setSubMenuOpen(!subMenuOpen);
     };
+
+    useEffect(() => {
+        console.log('SubMENU is: ' + subMenuOpen);
+        if(subMenuOpen) {
+            setSubMenuOpen(false);
+        }
+    }, [pathname]);
+    
     const isMode = item.title === "Mode";
-    console.log(item.title + " : " + isMode);
     if (isMode) {
         return <ThemeSwitch /> 
     } else {
@@ -70,6 +78,7 @@ const MenuItem = ({ item }: { item: NavItem }) => {
                                 
                                 return (
                                     <Link
+                                        onClick={toggleSubMenu}
                                         key={index}
                                         href={subItem.path}
                                         className={`${subItem.path === pathname ? "font-semibold text-background bg-secondary" : "text-secondary hover:text-foreground hover:bg-secondary"} px-10 py-2 block w-full border-b border-border`}
