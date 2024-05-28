@@ -45,7 +45,6 @@ const MenuItem = ({ item }: { item: NavItem }) => {
     };
 
     useEffect(() => {
-        console.log('SubMENU is: ' + subMenuOpen);
         if(subMenuOpen) {
             setSubMenuOpen(false);
         }

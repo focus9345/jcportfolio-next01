@@ -23,8 +23,8 @@ export default function Header() {
       className={cn(
         `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-border`,
         {
-          "border-b border-border/50 bg-foreground/70 backdrop-blur-lg": scrolled,
-          "border-b border-border/50 bg-background/50": selectedLayout,
+          "border-b border-border/50 bg-background/50 backdrop-blur-lg": scrolled,
+          "border-b border-border/50 bg-background/60": selectedLayout,
         }
       )}
     >

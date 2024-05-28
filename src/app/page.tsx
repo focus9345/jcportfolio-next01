@@ -22,6 +22,7 @@ export default function Home() {
                 src={DevImage}
                 className="shadow-xl h-auto max-w-full rounded-xl"
                 alt="Placeholder"
+                priority
               />
             </div>
             <div className="">
@@ -43,6 +44,7 @@ export default function Home() {
                 src={TeamImage}
                 className="shadow-xl rounded-xl object-cover h-52 w-full"
                 alt="Placeholder"
+                priority
               />
             </div>
             <div className=" md:basis-2/3">
@@ -61,6 +63,7 @@ export default function Home() {
                 src={SolveImage}
                 className="shadow-xl object-cover h-52 w-full rounded-xl"
                 alt="Placeholder"
+                priority
               />
             </div>
             <div className=" md:basis-2/3">
