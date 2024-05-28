@@ -3,6 +3,12 @@ import ProjectGrid from '@/components/projects/project-grid';
 import {
     FaLaptopCode,
 } from "react-icons/fa6";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Fullstack Developer for Hire",
+    description: "I'm Joshua Connor, a full-stack developer available for hire. These are a few examples of Design, App Development, Websites, and Project Documentation.",
+  };
 
 export default function Projects() {
     return (

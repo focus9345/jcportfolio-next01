@@ -1,5 +1,6 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
+import type { Metadata } from "next";
 import { FaDesktop, FaServer } from "react-icons/fa6";
 import RaceBicycle from '../../../public/bicycle.svg';
 import TeamImage from '../../../public/pexels-fauxels-3183150.jpg';
@@ -7,6 +8,11 @@ import ModeImage from '@/components/modeImage';
 import UiPath from '../../../public/uipath.png';
 import SCSUdark from '../../../public/southernct_white.svg';
 import SCSUlight from '../../../public/southernct_black.svg';
+
+export const metadata: Metadata = {
+  title: "Fullstack Developer Joshua Connor",
+  description: "About the fullstack developer Joshua Connor, Ideas on software teams, and accomplishments",
+};
 
 export default function About() {
 
@@ -25,8 +31,13 @@ export default function About() {
             <div className="">
               <h1 className="mb-4">Who am I?</h1>
               <p>Im a fullstack developer focusing on React to develop great apps that help people to be better team members. At the heart of every app there is a common goal from a business prespective. Take an input and share it with others or organize it, to help accomplish some task. </p>
-              <button className="my-3 px-5 py-3 bg-sky-500 hover:bg-sky-700 text-zinc-100 transition duration-150 rounded ease-out hover:ease-in float-right"> Visit Portfolio </button>
-            </div>
+              <Link 
+              href="/projects"
+              className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"
+              >
+                Visit Portfolio
+              </Link>
+             </div>
           </div>
 
         </div>

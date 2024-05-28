@@ -17,9 +17,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Joshua Connor Next Portfolio",
-  description: "Details on projects and development of Joshua Connor a fullstack developer.",
+  title: "Fullstack Developer for Hire",
+  description: "I'm Joshua Connor, a full-stack developer available for hire. My focus is on delivering excellent software that is user-friendly and easy to maintain.",
+  icons: {
+    icon: '/favicon_io/favicon-32x32.png',
+  }
 };
+
+
 
 export default function RootLayout({
   children,

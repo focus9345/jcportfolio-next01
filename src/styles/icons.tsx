@@ -248,7 +248,7 @@ export const IconsList: ProjectIcons[] = [
     },
     {
         id: 'adobeIllustrator',
-        name: 'AdobeIllustrator',
+        name: 'Adobe Illustrator',
         icon: <SiAdobeillustrator className="text-xl" />
     },
     
