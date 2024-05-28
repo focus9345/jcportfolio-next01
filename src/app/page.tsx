@@ -27,7 +27,7 @@ export default function Home() {
             </div>
             <div className="">
               <h1 className="mb-4">Hi, Im Joshua Connor</h1>
-              <p>I am a Front-End/Full-Stack Developer. I'm currently seeking my next opportunity to learn, grow, share my knowledge, and create something great.</p>
+              <p>I am a Front-End/Full-Stack Developer. I&rsquo;m currently seeking my next opportunity to learn, grow, share my knowledge, and create something great.</p>
               <Link 
                 href="/projects"
                 className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> Visit Portfolio </Link>
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className=" md:basis-2/3">
               <h2>Listen Before Solving</h2>
-              <p>One thing experience has taught me is that when software attempts to solve business problems, it's best to truly understand the users and their goals, aiming to make their processes easier.</p>
+              <p>One thing experience has taught me is that when software attempts to solve business problems, it&rsquo;s best to truly understand the users and their goals, aiming to make their processes easier.</p>
               <Link 
                 href="https://www.linkedin.com/in/connorjoshua/"
                 className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> Contact Me </Link>

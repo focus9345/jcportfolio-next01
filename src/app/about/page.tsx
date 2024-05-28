@@ -30,7 +30,7 @@ export default function About() {
             </div>
             <div className="">
               <h1 className="mb-4">Who am I?</h1>
-              <p>Im a fullstack developer focusing on React to develop great apps that help people to be better team members. At the heart of every app there is a common goal from a business prespective. Take an input and share it with others or organize it, to help accomplish some task. </p>
+              <p>I&rsquo;m a fullstack developer focusing on React to develop great apps that help people to be better team members. At the heart of every app there is a common goal from a business prespective. Take an input and share it with others or organize it, to help accomplish some task. </p>
               <Link 
               href="/projects"
               className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"
@@ -120,7 +120,7 @@ export default function About() {
             <li>Fullstack LAMP developer, created business-to-consumer marketing websites.</li>
             <li>Improved build and deployment best practices, SEO improvements to development practices.</li>
             <li>UI/UX designing new customizations.</li>
-            <li>Highlights - built and deployed over 250 websites in one year</li>
+            <li>Highlights &mdash; built and deployed over 250 websites in one year</li>
             </ul>
           </div>
 
@@ -135,7 +135,7 @@ export default function About() {
             <div className="basis-2/3">
             <p>Southern Conneticut State University<br />
             <strong>Masters of Science</strong><br />
-            Computer Science - Software Development<br />
+            Computer Science &mdash; Software Development<br />
             Spring 2020</p>
             </div>
 
@@ -147,7 +147,7 @@ export default function About() {
               <div className="basis-2/3">
               <p>Southern Conneticut State University<br />
             <strong>Bachelor of Science</strong><br />
-            Studio Art - Graphic Design<br />
+            Studio Art &mdash; Graphic Design<br />
             Spring 2018</p>
               </div>
           </div>
@@ -171,7 +171,7 @@ export default function About() {
         <h4 className=" my-1">Deans List</h4>
         <p className="pb-4">Southern Connecticut State University<br />
           Bachelors of Science<br />
-          Fall 2016 & Spring 2017</p>
+          Fall 2016 &amp; Spring 2017</p>
 
         <h4 className=" my-1">Honor Society</h4>
         <p className="pb-4">Southern Connecticut State University,<br />
