@@ -26,6 +26,7 @@ export default function About() {
                 src={RaceBicycle}
                 className="h-auto max-w-full rounded-xl"
                 alt="Placeholder"
+                priority
               />
             </div>
             <div className="">
@@ -49,6 +50,7 @@ export default function About() {
                 src={TeamImage}
                 className="shadow-xl rounded-xl object-cover h-52 w-full mt-1"
                 alt="Placeholder"
+                priority
               />
             </div>
             <div className="md:basis-2/3">
