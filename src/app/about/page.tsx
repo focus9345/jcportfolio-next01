@@ -31,7 +31,7 @@ export default function About() {
             </div>
             <div className="">
               <h1 className="mb-4">Who am I?</h1>
-              <p>I&rsquo;m a fullstack developer focusing on React to develop great apps that help people to be better team members. At the heart of every app there is a common goal from a business prespective. Take an input and share it with others or organize it, to help accomplish some task. </p>
+              <p>I am a full-stack developer specializing in using React to create high-quality apps that help people become better team members. Each app is driven by a common business goal: to receive input, share data, or organize it to accomplish specific tasks.</p>
               <Link 
               href="/projects"
               className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"
@@ -55,7 +55,7 @@ export default function About() {
             </div>
             <div className="md:basis-2/3">
               <h2>Teamwork Quality Factors</h2>
-              <p>Stakeholders and team members both are related to a teams performance. The factors that drive team performance and in turn output efficiency and preformance is the quality factors which are: Communication, Mutual Support, Cohesion, Trust, Value Div, Coordination of expert. In agile software development its important to make sure these factors of the team are supported during a project to ensure success.</p>
+              <p>Stakeholders and team members both play crucial roles in a team&rsquo;s performance. There are several key factors that drive team performance and, consequently, output efficiency and effectiveness. These quality factors include communication, mutual support, cohesion, trust, value diversity, and coordination of experts. In agile software development, it is vital to ensure that these team factors are supported throughout a project to guarantee success.</p>
 
             </div>
           </div>
@@ -66,6 +66,7 @@ export default function About() {
               <div className="basis-1/2">
                 <h3 className="text-base text-bold">Frontend</h3>
                 <ul className="text-sm">
+                  <li><FaDesktop className="text-xl pr-2 inline-block" />UI/UX Design</li>
                   <li><FaDesktop className="text-xl pr-2 inline-block" />Javascript</li>
                   <li><FaDesktop className="text-xl pr-2 inline-block" />CSS</li>
                   <li><FaDesktop className="text-xl pr-2 inline-block" />HTML</li>
@@ -77,8 +78,10 @@ export default function About() {
                 <h3 className="text-base text-bold">Backend</h3>
                 <ul className="text-sm">
                   <li><FaServer className="text-xl pr-2 inline-block" />Javascript</li>
-                  <li><FaServer className="text-xl pr-2 inline-block" />Node</li>
+                  <li><FaServer className="text-xl pr-2 inline-block" />NodeJS</li>
                   <li><FaServer className="text-xl pr-2 inline-block" />Express</li>
+                  <li><FaServer className="text-xl pr-2 inline-block" />PHP</li>
+                  <li><FaServer className="text-xl pr-2 inline-block" />Python</li>
                   <li><FaServer className="text-xl pr-2 inline-block" />SQL</li>
                   <li><FaServer className="text-xl pr-2 inline-block" />Firebase</li>
                 </ul>
@@ -98,9 +101,9 @@ export default function About() {
             <p>Senior RPA & UIUX Developer | Feb 2021-July 2023</p>
             <p>New Haven, CT, USA</p>
             <ul className="list-disc text-sm my-1">
-              <li>RPA, Developed complex RPA processes that connected to multiple different technologies like mainframe to salesforce.  Several processes have been noted to have benefits of over hundreds of hours of savings in manual labor, translating to thousands of dollars saved per month.</li>
-              <li>RPA, Documentation, Project Estimation, Software Support, and System Updates and Upgrades.</li>
-              <li>UI/UX, MS Hololense Software Documentation and improved user experience of AR application. Web Application Documentation and improved user experience, reducing the manual effort of users within a web application to complete certain tasks.</li>
+              <li>Developed complex RPA processes, for example, connected to multiple technologies like mainframe processes based on salesforce data changes. Several RPA processes have saved hundreds of hours of savings in manual labor, translating to thousands of dollars saved per month by customers.</li>
+              <li>RPA, Documentation, Project Estimation, Software Support, and RPA System Updates and Upgrades to new systems.</li>
+              <li>UI/UX, MS Hololense Software Documentation, and improved user experience of AR application. Web Application Documentation, SRS documents, and user flow diagrams reduce the manual effort of users within a web application to complete specified tasks.</li>
             </ul>
           </div>
 
@@ -110,7 +113,7 @@ export default function About() {
             <p>New Haven, CT, USA</p>
             <ul className="list-disc text-sm my-1">
               <li>College of Arts and Sciences 	New Haven, CT, USA</li>
-              <li>CMS, Migration & restructuring of content to a new web app, facilitated restructuring the student and department’s intranet content. Results, every department from two colleges migrated into a new student/department web portal.</li>
+              <li>CMS, Migration & restructuring of content to a new web app, facilitated the restructuring of the student and department&rsquo;s intranet content. The result, every department from the two colleges migrated into a new student/department web portal.</li>
             </ul>
           </div>
 
@@ -119,10 +122,10 @@ export default function About() {
             <p>Senior Front-End Developer | 2009 - 2016</p>
           <p>Bethesda, MD, USA</p>
             <ul className="list-disc text-sm my-1">
-            <li>Fullstack LAMP developer, created business-to-consumer marketing websites.</li>
+            <li>Full&ndash;stack LAMP developer created business-to-consumer marketing websites.</li>
             <li>Improved build and deployment best practices, SEO improvements to development practices.</li>
-            <li>UI/UX designing new customizations.</li>
-            <li>Highlights &mdash; built and deployed over 250 websites in one year</li>
+            <li>UI/UX design new customizations.</li>
+            <li>Highlights &mdash; built and deployed over 250 websites in one year.</li>
             </ul>
           </div>
 

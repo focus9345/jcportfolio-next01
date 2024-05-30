@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <div className=" md:basis-2/3">
               <h2>Software Development Teams</h2>
-              <p>Trust is at the heart of teamwork quality and preformance. Its earned with communication, cohesion, mutual support, and value sharing. </p>
+              <p>Trust lies at the core of team quality and performance. It is earned through communication, unity, mutual support, and shared values. </p>
               <Link
                 href="/about"
                 className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> More On Me </Link>
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className=" md:basis-2/3">
               <h2>Listen Before Solving</h2>
-              <p>One thing experience has taught me is that when software attempts to solve business problems, it&rsquo;s best to truly understand the users and their goals, aiming to make their processes easier.</p>
+              <p>One thing experience has taught me is that when software tries to address business problems, it&rsquo;s crucial to truly understand the users and their goals, with the aim of simplifying their processes.</p>
               <Link 
                 href="https://www.linkedin.com/in/connorjoshua/"
                 className="bg-button hover:bg-button/80 text-background my-3 px-5 py-3 transition duration-150 rounded ease-out hover:ease-in float-right"> Contact Me </Link>
